@@ -1770,7 +1770,6 @@ if (roofit_multiprocess)
 endif (roofit_multiprocess)
 
 #---Check for googletest---------------------------------------------------------------
-if (testing)
   if (NOT builtin_gtest)
     if(fail-on-missing)
       find_package(GTest REQUIRED)
@@ -1795,7 +1794,6 @@ if (testing)
       set(builtin_gtest OFF CACHE BOOL "Disabled because there is no internet connection" FORCE)
     endif()
   endif()
-endif()
 
 if (builtin_gtest)
   # FIXME: Remove our version of gtest in roottest. We can reuse this one.
