@@ -36,7 +36,7 @@ endef
 all: filter folders mathjax js images doxygen replaceCollaborationDiagrams notebooks rootWork
 
 filter:
-	`root-config --cxx` -o filter filter.cxx -std=c++14 -O2
+	`root-config --cxx` -o filter filter.cxx -std=c++17 -O2
 
 mathjax:
 	$(call MkDir,$(DOXYGEN_IMAGE_PATH))
