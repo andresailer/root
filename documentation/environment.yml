@@ -1,0 +1,24 @@
+name: root-development
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python =3.12
+  - doxygen
+  - pip
+  - make
+  - root
+  - c-compiler
+  - compilers
+  - gcc
+  - sphinx
+  - sphinx_rtd_theme
+  - pip:
+    - ipykernel
+    - metakernel
+    - nbconvert
+    - nbformat
+    - scandir
+    
