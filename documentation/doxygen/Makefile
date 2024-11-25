@@ -55,7 +55,7 @@ pyzdoc:
 	$(Python3_EXECUTABLE) extract_docstrings.py $(PYZ_DIR) $(DOXYGEN_PYZDOC_PATH)
 	$(Python3_EXECUTABLE) print_roofit_pyz_doctrings.py > $(DOXYGEN_PYZDOC_PATH)/_roofit.pyzdoc
 
-doxygen: filter pyzdoc
+doxygen: filter 
 	rm -f tutorialWorklist_py tutorialWorklist_root
 	$(call MkDir,$(DOXYGEN_OUTPUT_DIRECTORY))
 	$(call MkDir,$(DOXYGEN_EXAMPLE_PATH))
