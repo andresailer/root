@@ -37,4 +37,6 @@ os.environ["CPATH"] = os.path.join(os.environ["CONDA_ENVS_PATH"], os.environ["CO
 
 subprocess.call('cd doxygen ; make', shell=True)
 
+subprocess.call('ls -l', shell=True)
+
 html_extra_path = ['../build/html']
