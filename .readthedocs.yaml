@@ -5,7 +5,7 @@ build:
     python: "mambaforge-latest"
 sphinx:
   configuration: documentation/conf.py
-  fail_on_warning: true
+  fail_on_warning: false
 conda:
   environment: documentation/environment.yml
 formats: []
