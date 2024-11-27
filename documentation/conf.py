@@ -33,7 +33,9 @@ subprocess.call('conda list', shell=True)
 
 subprocess.call('env', shell=True)
 
-cpath = os.path.join(os.environ["CONDA_ENVS_PATH"], os.environ["CONDA_DEFAULT_ENV"], "usr/include")
+cpath = os.path.join(os.environ["CONDA_ENVS_PATH"], os.environ["CONDA_DEFAULT_ENV"], "x86_64-conda-linux-gnu/sysroot/usr/include")
+
+os.environ["CPATH"] = cpath
 
 subprocess.call(f'export CPATH={cpath}; cd doxygen ; make', shell=True)
 
