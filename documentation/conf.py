@@ -33,9 +33,9 @@ subprocess.call('conda list', shell=True)
 
 subprocess.call('env', shell=True)
 
-os.environ["CPATH"] = os.path.join(os.environ["CONDA_ENVS_PATH"], os.environ["CONDA_DEFAULT_ENV"], "usr/include")
+cpath = os.path.join(os.environ["CONDA_ENVS_PATH"], os.environ["CONDA_DEFAULT_ENV"], "usr/include")
 
-subprocess.call('cd doxygen ; make', shell=True)
+subprocess.call(f'export CPATH={cpath}; cd doxygen ; make', shell=True)
 
 subprocess.call('ls -l', shell=True)
 
