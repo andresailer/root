@@ -36,7 +36,10 @@ endef
 all: filter folders mathjax js images doxygen replaceCollaborationDiagrams notebooks rootWork
 
 filter:
-	`root-config --cxx` -o filter filter.cxx -std=c++17 -O2
+	echo "conda usr include: ${CONDA_ENVS_PATH}/${CONDA_DEFAULT_ENV}"
+	ls -l ${CONDA_ENVS_PATH}/${CONDA_DEFAULT_ENV}
+	echo "CPATH is ${CPATH}"
+	`root-config --cxx` -I${CONDA_ENVS_PATH}/${CONDA_DEFAULT_ENV}/usr/include -o filter filter.cxx -std=c++17 -O2
 
 mathjax:
 	$(call MkDir,$(DOXYGEN_IMAGE_PATH))
