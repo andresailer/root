@@ -14,7 +14,7 @@ Python3_EXECUTABLE ?= python3
 export Python3_EXECUTABLE
 export PYSPARK_PYTHON := $(Python3_EXECUTABLE)
 
-DOXYGEN_OUTPUT_DIRECTORY ?= $(HOME)/rootdoc
+DOXYGEN_OUTPUT_DIRECTORY ?= $(PWD)/rootdoc
 export DOXYGEN_OUTPUT_DIRECTORY
 export DOXYGEN_SOURCE_DIRECTORY := ../..
 export DOXYGEN_ROOT_VERSION := $(shell root -l -b -q -e 'printf("%s\n",gROOT->GetGitBranch());')
