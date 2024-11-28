@@ -42,6 +42,6 @@ subprocess.call(f'export CPATH={cpath}; cd doxygen ; make', shell=True)
 subprocess.call('ls -l', shell=True)
 subprocess.call('ls -l doxygen', shell=True)
 subprocess.call('ls -l doxygen/source', shell=True)
-subprocess.call('ls -l ..', shell=True)
+subprocess.call('find .. -name "index.html"', shell=True)
 
 html_extra_path = ['doxygen/source/html']
